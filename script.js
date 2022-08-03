@@ -13,6 +13,9 @@ function randomColor(palette) {
 }
 
 function createGrid(width) {
+    if (width < 1 || width > 100) {
+        width = 1;
+    }
     for (let i  = 0; i < width; i++) {
         let row = document.createElement('div');
         grid.appendChild(row);
@@ -30,6 +33,7 @@ function removeGrid() {
     while (grid.firstChild) {
         grid.removeChild(grid.firstChild);
     }
+    
 }
 
 

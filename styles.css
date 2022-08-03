@@ -10,6 +10,10 @@
 
 #form {
     text-align:center;
+    width:100%;
+}
+#size-input {
+    width:15vw;
 }
 
 body {
