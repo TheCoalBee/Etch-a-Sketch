@@ -1,0 +1,28 @@
+#grid {
+    border:1px solid lightblue;
+    width:auto;
+    display:inline-block;
+    user-select: none;
+    margin-top:20px;
+}
+body:active {
+    -webkit-user-select:none;
+}
+
+body {
+    margin:20px;
+    -webkit-user-select:none;
+}
+
+.cellStyle {
+    vertical-align:top;
+    border:1px solid lightblue;
+    background-color:white;
+    height:18px;
+    width:18px;
+    display:inline-block;
+}
+
+div.cellStyle:hover {
+    background-color:black;
+}
