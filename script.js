@@ -12,20 +12,12 @@ function randomColor(palette) {
     return palette[i];
 }
 
-function createGrid(text) {
-    const dimensions = text.toString().split("x");
-    let rows = dimensions[0];
-    let cols = dimensions[1];
-
-    if (cols > 33) {
-        cols = 33;
-    }
-
-    for (let i  = 0; i < rows; i++) {
+function createGrid(width) {
+    for (let i  = 0; i < width; i++) {
         let row = document.createElement('div');
         grid.appendChild(row);
         row.classList.add("rowStyle");
-        for (let j = 0; j < cols; j++) {
+        for (let j = 0; j < width; j++) {
             let cell = document.createElement('div');
             row.appendChild(cell);
             cell.classList.add("cellStyle");
@@ -47,6 +39,8 @@ function resetGrid() {
     })
 }
 
+createGrid("12");
+
 // Event listeners
 
 resetBtn.addEventListener('click', resetGrid);
@@ -61,10 +55,10 @@ grid.onmousedown = () => {
     document.body.style.cursor = "none";
     gridCell.forEach(cell => {
         cell.onmouseover = () => {
-            cell.style.backgroundColor = randomColor(christmasColors);
+            cell.style.backgroundColor = "black";
         }
         cell.onclick = () => {
-            cell.style.backgroundColor = randomColor(christmasColors);
+            cell.style.backgroundColor = "black";
         }
     })
 }

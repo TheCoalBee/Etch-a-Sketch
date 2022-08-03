@@ -1,25 +1,36 @@
 #grid {
-    border:1px solid lightblue;
-    width:auto;
-    display:inline-block;
+    max-height:75vh;
+    aspect-ratio:1/1;
+    display:flex;
     user-select: none;
-    margin-top:20px;
+    margin: 20px auto 0;
+    border-top:1px solid black;
+    border-right:1px solid black;
 }
-body:active {
-    -webkit-user-select:none;
+
+#form {
+    text-align:center;
 }
 
 body {
     margin:20px;
     -webkit-user-select:none;
 }
+body:active {
+    -webkit-user-select:none;
+}
+
+.rowStyle {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
 
 .cellStyle {
-    vertical-align:top;
+    border-left:1px solid black;
+    border-bottom:1px solid black;
     background-color:white;
-    height:18px;
-    width:18px;
-    display:inline-block;
+    aspect-ratio:1/1;
 }
 
 div.cellStyle:hover {
