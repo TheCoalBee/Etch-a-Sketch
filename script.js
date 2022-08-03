@@ -60,12 +60,10 @@ enterBtn.onclick = () => {
 grid.onmousedown = () => {
     document.body.style.cursor = "none";
     gridCell.forEach(cell => {
-        cell.onmousemove = () => {
-            cell.classList.add('filled');
+        cell.onmouseover = () => {
             cell.style.backgroundColor = randomColor(christmasColors);
         }
         cell.onclick = () => {
-            cell.classList.add('filled');
             cell.style.backgroundColor = randomColor(christmasColors);
         }
     })
@@ -77,14 +75,14 @@ grid.onmouseover = () => {
 grid.onmouseup = () => {
     document.body.style.cursor = "default";
     gridCell.forEach(cell => {
-        cell.onmousemove = () => {
+        cell.onmouseover = () => {
         }
     })
 }
 grid.onmouseleave = () => {
     document.body.style.cursor = "default";
     gridCell.forEach(cell => {
-        cell.onmousemove = () => {
+        cell.onmouseover = () => {
         }
     })
 }
