@@ -13,7 +13,7 @@ function randomColor(palette) {
 }
 
 function createGrid(width) {
-    if (width < 1 || width > 100) {
+    if (width < 1 || width > 100 || isNaN(width)) {
         width = 1;
     }
     for (let i  = 0; i < width; i++) {
@@ -36,7 +36,6 @@ function removeGrid() {
     
 }
 
-
 function resetGrid() {
     gridCell.forEach(cell => {
         cell.style.backgroundColor = '';
@@ -58,7 +57,7 @@ enterBtn.onclick = () => {
 grid.onmousedown = () => {
     document.body.style.cursor = "none";
     gridCell.forEach(cell => {
-        cell.onmouseover = () => {
+        cell.onmousemove = () => {
             cell.style.backgroundColor = "black";
         }
         cell.onclick = () => {
@@ -73,14 +72,14 @@ grid.onmouseover = () => {
 grid.onmouseup = () => {
     document.body.style.cursor = "default";
     gridCell.forEach(cell => {
-        cell.onmouseover = () => {
+        cell.onmousemove = () => {
         }
     })
 }
 grid.onmouseleave = () => {
     document.body.style.cursor = "default";
     gridCell.forEach(cell => {
-        cell.onmouseover = () => {
+        cell.onmousemove = () => {
         }
     })
 }
